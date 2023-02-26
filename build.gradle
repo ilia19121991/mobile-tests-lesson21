@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.10.0'
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
 repositories {
@@ -26,10 +27,10 @@ allure {
 dependencies {
     testImplementation (
             //selenide
-            //"com.codeborne:selenide:6.11.2",
-            //"io.qameta.allure:allure-selenide:$allureVersion",
+            "com.codeborne:selenide:6.11.2",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             //appium
-            'io.appium:java-client:7.0.0',
+            'io.appium:java-client:8.3.0',
             //rest assured
             "io.rest-assured:rest-assured:5.3.0",
             "io.qameta.allure:allure-rest-assured:$allureVersion",

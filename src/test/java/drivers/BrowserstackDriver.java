@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
 import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
-    static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+   static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
     @SneakyThrows
     @Nonnull

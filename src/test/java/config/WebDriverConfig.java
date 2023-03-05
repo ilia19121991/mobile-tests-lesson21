@@ -1,12 +1,12 @@
 package config;
 
-import io.appium.java_client.internal.Config;
+import org.aeonbits.owner.Config;
 
 @Config.Sources({
         "classpath:${env}.properties"
 })
 
-public class WebDriverConfig extends Config {
+public interface WebDriverConfig extends Config {
 
     @Key("browserstack.user")
     String getBrowserstackUser();

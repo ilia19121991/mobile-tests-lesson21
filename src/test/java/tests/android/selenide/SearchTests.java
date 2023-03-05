@@ -10,7 +10,7 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.id;
 
-@Tag("Search tests")
+@Tag("search_tests")
 public class SearchTests extends TestBase {
 
     @Test

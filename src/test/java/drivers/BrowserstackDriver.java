@@ -24,16 +24,21 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.merge(capabilities);
 
         // Set your access credentials
-        mutableCapabilities.setCapability("browserstack.user", "ilia_53Wqdx");
-        mutableCapabilities.setCapability("browserstack.key", "f2snf4PdAdCyJ1qwNayW");
+        // mutableCapabilities.setCapability("browserstack.user", "ilia_53Wqdx");
+        // mutableCapabilities.setCapability("browserstack.key", "f2snf4PdAdCyJ1qwNayW");
+        mutableCapabilities.setCapability("browserstack.user", BrowserstackDriver.config.getBrowserstackUser());
+        mutableCapabilities.setCapability("browserstack.key", BrowserstackDriver.config.getBrowserstackKey());
 
         // Set URL of the application under test
-       mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
-        // mutableCapabilities.setCapability("app", "bs://2131018931d2da2ced887db452796099b6c996e9");
+        // mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c"); - sample app
+        // mutableCapabilities.setCapability("app", "bs://2131018931d2da2ced887db452796099b6c996e9"); - downloaded apk
+        mutableCapabilities.setCapability("app", BrowserstackDriver.config.getApp());
 
         // Specify device and os_version for testing
-        mutableCapabilities.setCapability("device", "Google Pixel 3");
-        mutableCapabilities.setCapability("os_version", "9.0");
+        // mutableCapabilities.setCapability("device", "Google Pixel 3");
+        // mutableCapabilities.setCapability("os_version", "9.0");
+        mutableCapabilities.setCapability("device", BrowserstackDriver.config.getDeviceName());
+        mutableCapabilities.setCapability("os_version", BrowserstackDriver.config.getPlatformVersion());
 
         // Set other BrowserStack capabilities
         mutableCapabilities.setCapability("project", "First Java Project");

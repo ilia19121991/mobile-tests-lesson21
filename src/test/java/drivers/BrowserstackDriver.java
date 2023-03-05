@@ -1,8 +1,9 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import io.appium.java_client.android.AndroidDriver;
+import config.WebDriverConfig;
 import lombok.SneakyThrows;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,8 @@ import javax.annotation.Nonnull;
 import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
+    static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+
     @SneakyThrows
     @Nonnull
     @Override

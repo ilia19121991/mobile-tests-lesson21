@@ -1,6 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import io.appium.java_client.android.AndroidDriver;
 import lombok.SneakyThrows;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -24,8 +25,8 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.key", "f2snf4PdAdCyJ1qwNayW");
 
         // Set URL of the application under test
-       // mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
-        mutableCapabilities.setCapability("app", "bs://2131018931d2da2ced887db452796099b6c996e9");
+       mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        // mutableCapabilities.setCapability("app", "bs://2131018931d2da2ced887db452796099b6c996e9");
 
         // Specify device and os_version for testing
         mutableCapabilities.setCapability("device", "Google Pixel 3");
